@@ -425,33 +425,34 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
       margin-top: 48px;
     }
 
     .gallery-item {
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
       position: relative;
       background: var(--dark);
-      aspect-ratio: 4/3;
+      height: 340px;
     }
 
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       display: block;
-      transition: transform 0.4s;
+      transition: transform 0.4s ease;
     }
 
-    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item:hover img { transform: scale(1.04); }
 
     .gallery-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(17,17,17,0.7) 0%, transparent 50%);
+      background: linear-gradient(to top, rgba(17,17,17,0.5) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.3s;
     }
@@ -460,7 +461,7 @@
 
     .gallery-item.featured {
       grid-column: span 2;
-      aspect-ratio: 16/9;
+      height: 420px;
     }
 
     /* ─── WHY FREEMAN ─── */
@@ -893,7 +894,7 @@
       <p class="section-desc fade-up">Our coolers go far beyond traditional vending — AI cameras, cashless payments, and dual-climate zones make every purchase seamless.</p>
       <div class="features-layout">
         <div class="features-image fade-up">
-          <img src="images/cooler-hero.jpg" alt="Freeman Vending full smart cooler unit" />
+          <img src="images/cooler-venue.jpg" alt="Freeman Vending smart cooler in venue" />
         </div>
         <div class="features-list fade-up">
           <div class="feature-item">
@@ -965,19 +966,19 @@
       <p class="section-desc fade-up">Sleek, modern design that fits the aesthetic of any apartment lobby, office, or entertainment space.</p>
       <div class="gallery-grid">
         <div class="gallery-item featured fade-up">
-          <img src="images/cooler-hero.jpg" alt="Freeman Vending smart cooler full unit" />
+          <img src="images/cooler-lobby.jpg" alt="Freeman Vending smart cooler in apartment lobby" />
           <div class="gallery-overlay"></div>
         </div>
         <div class="gallery-item fade-up">
-          <img src="images/cooler-lit.jpg" alt="Freeman Vending cooler lit up close" />
-          <div class="gallery-overlay"></div>
-        </div>
-        <div class="gallery-item fade-up">
-          <img src="images/cooler-lobby.jpg" alt="Freeman Vending cooler in apartment lobby" />
+          <img src="images/cooler-hotel.jpg" alt="Freeman Vending cooler in hotel setting" />
           <div class="gallery-overlay"></div>
         </div>
         <div class="gallery-item fade-up">
           <img src="images/cooler-venue.jpg" alt="Freeman Vending cooler in entertainment venue" />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item fade-up">
+          <img src="images/cooler-lit.jpg" alt="Freeman Vending cooler lit up" />
           <div class="gallery-overlay"></div>
         </div>
       </div>
